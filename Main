@@ -1,0 +1,119 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
+public class Main{
+	public static void main(String[] args) {
+		try (Scanner keybd = new Scanner(System.in)) {
+			
+			
+			System.out.println("What is your name? ");
+			String name = keybd.next();
+			System.out.println(name + ", welcome to Bible Trivia City! Answer questions, earn points, learn more about God!");
+			ArrayList<String> levelone = new ArrayList<String>();
+			levelone.add("Who built the ark?");
+			levelone.add("What was Sarah’s name before God changed it?");
+			levelone.add("Jesus said, I am the way, the truth, and the?");
+			levelone.add("Which disciple denied Jesus three times?");
+			levelone.add("What was Jesus’ hometown?");
+			levelone.add("What city was Jesus born in?");
+			levelone.add("Who was the first man?");
+			levelone.add("Who was the first woman?");
+
+				int x = 0;
+				
+				while(x<8) {
+					Random question = new Random();
+					int index = question.nextInt(levelone.size());
+					String q = levelone.get(index);
+				System.out.println(q);
+			String answerone = keybd.next();
+				System.out.println("You answered: " + answerone);
+				
+				if(q.contains("Who built the ark?")) {
+					if (answerone.contains("Noah") || answerone.contains("noah")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("What was Sarah’s name before God changed it?")) {
+					if (answerone.contains("Sarai") || answerone.contains("sarai")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("Jesus said, I am the way, the truth, and the?")) {
+					if (answerone.contains("Life") || answerone.contains("life")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("Which disciple denied Jesus three times?")) {
+					if (answerone.contains("Peter") || answerone.contains("peter")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("What was Jesus’ hometown?")) {
+					if (answerone.contains("Nazareth") || answerone.contains("nazareth")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("What city was Jesus born in?")) {
+					if (answerone.contains("Bethlehem") || answerone.contains("bethlehem")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("Who was the first man?")) {
+					if (answerone.contains("Adam") || answerone.contains("adam")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				
+				if(q.contains("Who was the first woman?")) {
+					if (answerone.contains("Eve") || answerone.contains("eve")){
+						System.out.println("Correct!");
+						x++;
+					}
+					else {
+						System.out.println("Incorrect!");
+					}
+				}
+				levelone.remove(index);
+				
+				}
+System.out.println("Your score is: " + x);
+
+
+		}
+	}
+}
